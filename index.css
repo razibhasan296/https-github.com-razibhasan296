@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #22d3ee;
+  --theme-secondary: #a855f7;
+  --theme-accent: #ec4899;
+  --theme-bg: #000000;
+  --theme-accent-glow: rgba(34, 211, 238, 0.4);
+  --blueprint-line: rgba(34, 211, 238, 0.2);
+  --blueprint-bg: #050a15;
+}
+
+.blueprint-grid {
+  background-image: 
+    linear-gradient(var(--blueprint-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--blueprint-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.blueprint-subgrid {
+  background-image: 
+    linear-gradient(var(--blueprint-line) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, var(--blueprint-line) 0.5px, transparent 0.5px);
+  background-size: 10px 10px;
+  opacity: 0.5;
+}
+
+.blueprint-border {
+  border: 1px solid var(--blueprint-line);
+  position: relative;
+}
+
+.blueprint-border::before,
+.blueprint-border::after {
+  content: '';
+  position: absolute;
+  background: var(--theme-primary);
+  opacity: 0.5;
+}
+
+/* Corner marks */
+.blueprint-corner-tl { position: absolute; top: -2px; left: -2px; width: 10px; height: 10px; border-top: 2px solid var(--theme-primary); border-left: 2px solid var(--theme-primary); }
+.blueprint-corner-tr { position: absolute; top: -2px; right: -2px; width: 10px; height: 10px; border-top: 2px solid var(--theme-primary); border-right: 2px solid var(--theme-primary); }
+.blueprint-corner-bl { position: absolute; bottom: -2px; left: -2px; width: 10px; height: 10px; border-bottom: 2px solid var(--theme-primary); border-left: 2px solid var(--theme-primary); }
+.blueprint-corner-br { position: absolute; bottom: -2px; right: -2px; width: 10px; height: 10px; border-bottom: 2px solid var(--theme-primary); border-right: 2px solid var(--theme-primary); }
+
+.measurement-line {
+  position: absolute;
+  background: var(--blueprint-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: var(--theme-primary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent);
+}

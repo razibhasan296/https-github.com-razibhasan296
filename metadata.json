@@ -1,0 +1,8 @@
+{
+  "name": "Smart AI Map",
+  "description": "A futuristic 360° world exploration interface integrated with the Starlink Orbital Intelligence Network. Features real-time satellite mesh visualization, technical blueprint aesthetics, and deep strategic RAI analysis.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
